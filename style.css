@@ -1,0 +1,36 @@
+div li {
+ list-style:none;
+ display:inline-block;
+ padding: 5px;
+ position: relative;
+ text-transform: uppercase;
+
+}
+
+li:before,
+li:after {
+ transition: transform 0.3s ;
+ display:inline-block;
+ margin:20px;
+ opacity: 0;
+}
+li:before {
+   content: '[';
+   transform: translate(20px);
+
+
+}
+li:after{
+ content:']';
+ transform: translate(-20px);
+}
+
+li:hover:before,
+li:hover:after,
+li:focus:before,
+li:focus:after {
+   opacity: 1;
+   -webkit-transform: translate(0px);
+   -moz-transform: translate(0px);
+   transform: translate(0px);
+}
